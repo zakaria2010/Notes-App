@@ -35,7 +35,13 @@ function addNewNote(text = '') {
         main.innerHTML = textArea.outerHTML;
     });
 
-
-    
     document.body.appendChild(note);
+}
+//add a localStorage
+function updateLs(){
+    const notesText = document.querySelectorAll('textarea')
+    const notes = []
+    notesText.forEach((note) => notes.push(note.value));
+    
+    console.log(notes)
 }
